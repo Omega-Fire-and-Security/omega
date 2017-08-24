@@ -1,0 +1,35 @@
+{
+  "name": "omega",
+  "version": "1.0.0",
+  "description": "This is the main website for Omega Fire and Security",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cazs/omega.git"
+  },
+  "keywords": [
+    "omega",
+    "fire",
+    "security",
+    "cctv",
+    "access",
+    "control",
+    "surveillance"
+  ],"dependencies":
+  {
+	"express":"*",
+	"body-parser":"*",
+	"generator-keystone":"*",
+	"keystone":"*"
+  },
+  "devDependencies":{"nodemon":"*"},
+  "author": "Casper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cazs/omega/issues"
+  },
+  "homepage": "https://github.com/Cazs/omega#readme"
+}

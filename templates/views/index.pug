@@ -1,0 +1,51 @@
+extends ../layouts/default
+
+block content
+	#omega_carousel.carousel.slide(data-ride='carousel')
+		ol.carousel-indicators(style="background-color:#343434;width:100px;margin:auto;border-radius:15px;")
+			li.active(data-target='omega_carousel', data-slide-to='1')
+			li(data-target='omega_carousel', data-slide-to='2')
+			li(data-target='omega_carousel', data-slide-to='3')
+		.carousel-inner(role='listbox')
+			.item.active
+				img.slide-1(src='/images/slider/1.png', alt='First slide')
+				.container
+					.carousel-caption Slide 1 caption
+			.item
+				img.slide-2(src='/images/slider/2.png', alt='Second slide')
+				.container
+					.carousel-caption Slide 2 caption
+			.item
+				img(src='/images/slider/3.png', alt='Third slide')
+				.container
+					.carousel-caption Slide 3 caption
+		a.left.carousel-control(href='#!/#omega_carousel', role='button', data-slide='prev')
+			span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+			span.sr-only Previous
+		a.right.carousel-control(href='#!/#omega_carousel', role='button', data-slide='next')
+			span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+			span.sr-only Next
+			//end of carousel
+
+	.row(style='margin:25px;')
+		.col-xs-12.col-sm-4.col-md-4.col-lg-4
+			//div(style='width:140px;height:140px;margin:auto;background-color:rgba(233, 65, 132, 1.0);border-radius:20px;border:1px solid #fff;')
+			img(src='/images/alrm_back.jpg', style='margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='INTRUSION SYSTEMS')
+			h3(style='text-align:center') INTRUSION SYSTEMS
+			p(style='text-align:center') We supply, install and support alarm devices for audible, visual alarm signal.
+		.col-xs-12.col-sm-4.col-md-4.col-lg-4
+			img(src='/images/smoke_back.jpg', style='margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='FIRE DETECTION / SUPPRESSION')
+			h3(style='text-align:center') FIRE DETECTION / SUPPRESSION
+			p(style='text-align:center') We supply Residential, Commercial or industrial devices.
+		.col-xs-12.col-sm-4.col-md-4.col-lg-4
+			img(src='/images/tag_back.jpg', style='margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='ACCESS CONTROL')
+			h3(style='text-align:center') ACCESS CONTROL
+			p(style='text-align:center')
+			| We supply &amp; install various High Quality Security Products.
+			br
+			a(href='/about#tc') Terms &amp; Conditions
+			|  apply.				
+
+	//script(src="/js/jquery/jquery-2.1.4.min.js")
+	//script(src="/js/bootstrap/bootstrap-3.3.5.min.js")
+	script(src="/js/brands-carousel.js")
