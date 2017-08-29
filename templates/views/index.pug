@@ -2,23 +2,33 @@ extends ../layouts/default
 
 block content
 	#omega_carousel.carousel.slide(data-ride='carousel')
-		ol.carousel-indicators(style="background-color:#343434;width:100px;margin:auto;border-radius:15px;")
+		ol.carousel-indicators(style="background-color:#343434;width:100px;margin:auto;margin-left:-50px;border-radius:15px;")
 			li.active(data-target='omega_carousel', data-slide-to='1')
 			li(data-target='omega_carousel', data-slide-to='2')
 			li(data-target='omega_carousel', data-slide-to='3')
+			li(data-target='omega_carousel', data-slide-to='4')
 		.carousel-inner(role='listbox')
 			.item.active
-				img.slide-1(src='/images/slider/1.png', alt='First slide')
+				img.slide-1(src='/images/slider/financial-solutions-available.png', alt='First slide')
 				.container
-					.carousel-caption Slide 1 caption
+					.carousel-caption
+						a.btn.btn-lg.btn-default(href='/blog/post/financial-solutions-now-available', style="border: 1px solid #f14300;") Learn More >>
 			.item
-				img.slide-2(src='/images/slider/2.png', alt='Second slide')
+				img.slide-2(src='/images/slider/small-businesses-expo.png', alt='Second slide')
 				.container
-					.carousel-caption Slide 2 caption
+					.carousel-caption
+						a.btn.btn-lg.btn-default(href='/blog/post/small-businesses-expo', style="border: 1px solid #f14300;") Learn More >>
+						a.btn.btn-lg.btn-default(href='http://www.reedexpoafrica.co.za/SmallBizExpo/visitors/visitor-registration/', style="border: 1px solid #f14300;margin-left:10px;", target="_blank") Register >>
 			.item
-				img(src='/images/slider/3.png', alt='Third slide')
+				img.slide-3(src='/images/slider/hikvision-promo.png', alt='Third slide')
 				.container
-					.carousel-caption Slide 3 caption
+					.carousel-caption
+						a.btn.btn-lg.btn-default(href='/specials#hikvision-cctv-special', style="border: 1px solid #f14300;") Learn More >>
+			.item
+				img.slide-4(src='/images/slider/aug-promo.png', alt='Fourth slide')
+				.container
+					.carousel-caption
+						a.btn.btn-lg.btn-default(href='/specials#tvt-cctv-special', style="border: 1px solid #f14300;") Learn More >>
 		a.left.carousel-control(href='#!/#omega_carousel', role='button', data-slide='prev')
 			span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
 			span.sr-only Previous
@@ -28,23 +38,27 @@ block content
 			//end of carousel
 
 	.row(style='margin:25px;')
-		.col-xs-12.col-sm-4.col-md-4.col-lg-4
+		.col-xs-12.col-sm-6.col-md-6.col-lg-3
 			//div(style='width:140px;height:140px;margin:auto;background-color:rgba(233, 65, 132, 1.0);border-radius:20px;border:1px solid #fff;')
-			img(src='/images/alrm_back.jpg', style='margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='INTRUSION SYSTEMS')
+			img(src='/images/intrusion/alrm_back.jpg', style='margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='INTRUSION SYSTEMS')
 			h3(style='text-align:center') INTRUSION SYSTEMS
 			p(style='text-align:center') We supply, install and support alarm devices for audible, visual alarm signal.
-		.col-xs-12.col-sm-4.col-md-4.col-lg-4
-			img(src='/images/smoke_back.jpg', style='margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='FIRE DETECTION / SUPPRESSION')
+		.col-xs-12.col-sm-6.col-md-6.col-lg-3
+			img(src='/images/cctv/hikvision-cctv.png', style='width:300px;height:165px;margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='CCTV SURVEILLANCE SYSTEMS')
+			h3(style='text-align:center') CCTV SURVEILLANCE
+			p(style='text-align:center') We supply, install and support CCTV systems.
+		.col-xs-12.col-sm-6.col-md-6.col-lg-3
+			img(src='/images/fire/smoke_back.jpg', style='margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='FIRE DETECTION / SUPPRESSION')
 			h3(style='text-align:center') FIRE DETECTION / SUPPRESSION
 			p(style='text-align:center') We supply Residential, Commercial or industrial devices.
-		.col-xs-12.col-sm-4.col-md-4.col-lg-4
-			img(src='/images/tag_back.jpg', style='margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='ACCESS CONTROL')
+		.col-xs-12.col-sm-6.col-md-6.col-lg-3
+			img(src='/images/access/morpho-sigma.jpg',style='width:300px;height:165px;margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='ACCESS CONTROL')
 			h3(style='text-align:center') ACCESS CONTROL
-			p(style='text-align:center')
+			p(style='text-align:center;')
 			| We supply &amp; install various High Quality Security Products.
 			br
-			a(href='/about#tc') Terms &amp; Conditions
-			|  apply.				
+			a(href='/about#tc', style="text-align:center;") Terms &amp; Conditions
+			|  apply.
 
 	//script(src="/js/jquery/jquery-2.1.4.min.js")
 	//script(src="/js/bootstrap/bootstrap-3.3.5.min.js")

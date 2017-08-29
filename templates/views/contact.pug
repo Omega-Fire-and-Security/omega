@@ -5,11 +5,20 @@ block intro
 		h1 Contact Us
 		
 block content
-	.container
+	.container(style="margin:auto;")
+		.row
+			.col-xs-12.col-lg-6
+				h2 HEAD OFFICE GAUTENG
+				p Tel:  011 680 0640
+				p Fax: 011 680 0646
+			.col-xs-12.col-lg-6
+				h2 HEAD OFFICE GAUTENG
+				p Tel:  011 680 0640
+				p Fax: 011 680 0646
 		if enquirySubmitted
 			h3 Thanks for getting in touch.
 		else
-			.row: .col-sm-8.col-md-6
+			.row: .col-sm-8.col-md-6(style="width:80%;background-color:red;margin:auto;")
 				form(method='post')
 					input(type='hidden', name='action', value='contact')
 					.form-group(class=validationErrors.name ? 'has-error' : null)
@@ -31,4 +40,4 @@ block content
 						label Message
 						textarea(name='message', placeholder='Leave us a message...' rows=4).form-control= formData.message
 					.form-actions
-						button(type='submit').btn.btn-primary Send
+						button(type='submit', style="width: 120px;height: 50px;margin:auto;").btn.btn-primary Send

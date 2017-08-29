@@ -36,10 +36,14 @@ exports = module.exports = function (app)
 {
 	// Views
 	app.get('/', routes.views.index);
-	app.get('/services', routes.views.services);
-	app.get('/services-pa-evacuation-systems', routes.views.services_pa);
-	app.get('/services-fire-detection-systems', routes.views.services_fire);
-	app.get('/services-nurse-call-systems', routes.views.services_nurse);
+	app.get('/services', routes.views.services.services);
+	app.get('/services/pa-evacuation-systems', routes.views.services.pa_evacuation);
+	app.get('/services/fire-detection-systems', routes.views.services.fire_detection);
+	app.get('/services/nurse-call-systems', routes.views.services.nurse_call);
+	app.get('/services/intrusion-detection-systems', routes.views.services.intrusion_detection);
+	app.get('/services/access-control-systems', routes.views.services.access_control);
+	app.get('/services/integrated-bms-systems', routes.views.services.integrated_bms);
+	app.get('/services/cctv-surveillance-systems', routes.views.services.cctv_surveillance);
 	app.get('/about', routes.views.about);
 	app.get('/specials', routes.views.specials);
 	app.get('/blog/:category?', routes.views.blog);

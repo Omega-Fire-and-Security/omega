@@ -45,14 +45,14 @@ html
 			div(role="navigation").navbar.navbar-fixed-top
 				.container-fluid
 					.navbar-header
-						button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar')
+						button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar', style="margin-top: 30px;")
 							span.sr-only Toggle navigation
 							span.icon-bar(style='background-color:black;')
 							span.icon-bar(style='background-color:black;')
 							span.icon-bar(style='background-color:black;')
 						a.navbar-brand(href='/')
 							img(style='margin-top:-20px;width:300px;height:100px;', src='/images/omega-logo.svg')
-					.collapse.navbar-collapse(style="background-color:transparent !important;")
+					#navbar.collapse.navbar-collapse
 						ul.nav.navbar-nav.navbar-left(style="background-color:transparent !important;")
 							each link in navLinks
 								if(link.key!='services')
@@ -62,26 +62,34 @@ html
 										span.sr-only (current)
 										a.dropdown-toggle(href='', style="background-color: transparent !important;", data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Services
 											span.caret
-										ul.dropdown-menu
+										ul.dropdown-menu(style="background-color:#636363;z-index: 5;")
 											li
-												a(href='/services-fire-detection-systems', style="background-color: transparent !important;text-align:left;") Fire Detection, Gas suppression etc. Systems
+												a(href='/services/fire-detection-systems', style="background-color: transparent !important;text-align:left;") *Fire Detection &amp; Gas Suppression Systems
 											li
-												a(href='/services-pa-evacuation-systems', style="background-color: transparent !important;text-align:left;") Public Address &amp; Evacuation Systems
+												a(href='/services/pa-evacuation-systems', style="background-color: transparent !important;text-align:left;") *Public Address &amp; Evacuation Systems
 											li
-												a(href='/services-nurse-call-systems', style="background-color: transparent !important;text-align:left;") Nurse Call Systems
+												a(href='/services/access-control-systems', style="background-color: transparent !important;text-align:left;") *Access Control/Time &amp; Attendance Solutions
+											li
+												a(href='/services/cctv-surveillance-systems', style="background-color: transparent !important;text-align:left;") *CCTV Surveillance Systems
+											li
+												a(href='/services/intrusion-detection-systems', style="background-color: transparent !important;text-align:left;") *Intrusion Detection Systems
+											li
+												a(href='/services/integrated-bms-systems', style="background-color: transparent !important;text-align:left;") *Integrated BMS
+											li
+												a(href='/services/nurse-call-systems', style="background-color: transparent !important;text-align:left;") *Nurse Call Systems
 											//li.divider(role='separator', style="background-color:#636363;")
 											//li
 											//	a(href='', style="background-color: transparent !important;") Log out
-						ul.nav.navbar-nav.navbar-right(style="background-color:transparent !important;")
+						ul.nav.navbar-nav.navbar-right
 							li
-								a(href='', style="background-color:transparent !important;")
-									#lnk_face.social-link(style="width:45px;height:45px;")
+								a(href='https://web.facebook.com/OmegaFireAndSec/' style="background-color:transparent !important;", target="_blank",)
+									#lnk_face.social-link(style="width:45px;height:45px;margin:auto;")
 							li
-								a(href='', style="background-color:transparent !important;")
-									#lnk_twit.social-link(style="width:45px;height:45px;")
+								a(href='', style="background-color:transparent !important;", target="_blank")
+									#lnk_twit.social-link(style="width:45px;height:45px;margin:auto;")
 							li
-								a(href='', style="background-color:transparent !important;")
-									#lnk_inst.social-link(style="width:45px;height:45px;")
+								a(href='', style="background-color:transparent !important;", target="_blank")
+									#lnk_inst.social-link(style="width:45px;height:45px;margin:auto;")
 
 		//- BODY
 		#body
@@ -106,49 +114,62 @@ html
 				div(style="height:80px;background-color: #f14300;border-radius:10px;")
 					h2(style="text-align:center;padding-top:5px;color:#fff;") Protecting Life and Property
 					h4(style="text-align:center;color:#fff;") through Innovation and Technology
-				p(style="text-align:center;") Head Office: 011 680 0640 | Emergency: 082 788 6424 | Website: www.omegafs.co.za
-				p(style="text-align:center;") Direct all enquiries to: info.foag.co.za
-				.row(style="width:90%;margin:auto;")
-					.col-md-3.col-sm-12
-						img(src="/images/partners/fdia-logo.jpg", style="width:150px;height:70px;", alt="FDIA Logo")
-					.col-md-3.col-sm-12
-						img(src="/images/partners/psira-logo.png", style="width:150px;height:70px;", alt="PSIRA Logo")
-					.col-md-3.col-sm-12
-						img(src="/images/partners/fpa-logo.jpg", style="width:150px;height:70px;", alt="FPA Logo")
-					.col-md-3.col-sm-12
-						img(src="/images/partners/saqcc-logo.png", style="width:150px;height:70px;", alt="SAQCC Logo")
+				p(style="text-align:center;")
+					strong Head Office:
+					|  011 680 0640 |
+					strong(style="margin-left:5px;") Emergency:
+					|  082 788 6424 |
+					strong(style="margin-left:5px;") Website:
+					a(href="http://www.omegafs.co.za/")  www.omegafs.co.za
+				p(style="text-align:center;font-style:italic;font-size:16px;") Omega Fire &amp; Security provides Intelligent Building and Security Solutions which meet the demands of tomorrow's future.
+				p(style="text-align:center;font-style:italic;font-size:16px;") Please direct all enquiries to: 
+					a(href="mailto:info@foag.co.za") info@foag.co.za
+				div(style="width:55%;margin:auto;")
+					.row(style="margin:auto;")
+						.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
+							a(href="https://www.fdia.co.za/", target="_blank")
+								img(src="/images/partners/fdia-logo.jpg", style="width:150px;height:70px;margin:auto;", alt="FDIA Logo")
+						.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
+							a(href="http://www.psira.co.za/", target="_blank")
+								img(src="/images/partners/psira-logo.png", style="width:150px;height:70px;", alt="PSIRA Logo")
+						.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
+							a(href="http://www.fpasa.co.za/", target="_blank")
+								img(src="/images/partners/fpa-logo.jpg", style="width:150px;height:70px;", alt="FPA Logo")
+						.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
+							a(href="https://www.saqccfire.co.za/", target="_blank")
+								img(src="/images/partners/saqcc-logo.png", style="width:150px;height:70px;", alt="SAQCC Logo")
 				h4(style="font-weight: bold;text-align:center;") 100% Black Owned EME | Level 1 BBBEE (BWO)
-			.mastfoot
-				.inner
-					p(style='text-align:center;font-size:16px;')
-						if user
-							if user.canAccessKeystone
-								a(style='margin-right:5px;', href='/keystone') | Open Keystone |
-							a(href='/keystone/signout') | Dashboard Sign Out |
-						else
-							a(href='/keystone/signin') | Dashboard Sign In |
-					p(style='color:#000;text-align:center;font-size:16px;') &copy;2017,
-						|
-						a(href='http://omegafs.co.za/')   Omega Fire and Security
-						|
-					ul#social-link-container
-						li
-							a(href='')
-								#lnk_face.social-link
-						li
-							a(href='')
-								#lnk_twit.social-link
-						li
-							a(href='')
-								#lnk_inst.social-link
+				.mastfoot
+					.inner
+						p(style='text-align:center;font-size:16px;')
+							if user
+								if user.canAccessKeystone
+									a(style='margin-right:5px;', href='/keystone') | Open Keystone |
+								a(href='/keystone/signout') | Dashboard Sign Out |
+							else
+								a(href='/keystone/signin') | Dashboard Sign In |
+						p(style='color:#000;text-align:center;font-size:16px;') &copy;2017,
+							|
+							a(href='http://omegafs.co.za/')   Omega Fire and Security
+							|
+						ul#social-link-container
+							li
+								a(href='https://web.facebook.com/OmegaFireAndSec/')
+									#lnk_face.social-link
+							li
+								a(href='')
+									#lnk_twit.social-link
+							li
+								a(href='')
+									#lnk_inst.social-link
 
-					p(style="color:#000;")
-						img(alt="coded", src='images/ic_code_black_48px.svg', style="width:25px;height:25px;")
-						|  with
-						img(alt="love", src='images/ic_favorite_black_48px.svg', style="width:25px;height:25px;")
-						|  by
-						a(href="http://casper.ndlovu.me", style="margin-left:10px;") Casper
-						|  | Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
+						p(style="color:#000;text-align:center;")
+							img(alt="coded", src='images/ic_code_black_48px.svg', style="width:25px;height:25px;")
+							|  with 
+							img(alt="love", src='images/ic_favorite_black_48px.svg', style="width:25px;height:25px;")
+							|  by
+							a(href="http://casper.ndlovu.me", style="margin-left:10px;") Casper
+							|  | Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
 
 
 		//- JAVASCRIPT

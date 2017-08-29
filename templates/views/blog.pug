@@ -28,6 +28,7 @@ block intro
 
 block content
 	.container: .row
+		h2(style="text-align:center") Posts
 		.col-sm-8.col-md-9
 			if filters.category && !data.category
 				h3.text-muted Invalid Category.
@@ -42,7 +43,7 @@ block content
 							strong #{data.posts.total}
 							|  posts.
 					else
-						h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
+						h4(style="padding-bottom:10px;border-bottom: 1px solid #eeeeee;").text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
 					.blog
 						each post in data.posts.results
 							+post(post)
