@@ -1,27 +1,19 @@
 extends ../../layouts/default
 
+block intro
+    h2(style="margin-top:80px;text-align:center;font-weight:bold;text-decoration: underline;")
+        span(class="glyphicon glyphicon-info-sign", style="width:80px;height:40px;margin-right:5px;", aria-hidden="true")
+        span Intrusion Detection Systems
+
 block content
     //h3(style="text-align:center;margin-top:80px;") FIRE DETECTION, GAS SUPPRESSION, PUBLIC ADDRESS EVACUATION SYSTEMS, NURSE CALL
     //h4(style="text-align:center;") Please enquire for systems not listed on the site.
     //h4(style="text-align:center;") SANS 10139, SANS 14520, SANS 246, SANS 369, SANS 322, SANS 306, SANS 7240
 
-    div(style="width:80%;margin:auto;margin-top:130px;border-top: 1px solid #eeeeee;")
-        h4(style="text-align:center;font-weight:bold;text-decoration: underline;")
-            span(class="glyphicon glyphicon-info-sign", style="width:80px;height:40px;margin-right:5px;", aria-hidden="true")
-            span Intrusion Detection Systems
-        ul(style="font-size: 15pt;list-style:none;width:600px;margin:auto;")
-            li
-                p(style="text-align:left;font-size: 17px;")
-                    span(class="glyphicon glyphicon-triangle-right")
-                    |
-                    span Design Supply Install, Commission, Service SLA Intrusion Detection Systems.
-            li
-                p(style="text-align:left;font-size: 17px;")
-                    span(class="glyphicon glyphicon-triangle-right")
-                    span Dummy content
-            li
-                p(style="text-align:left;font-size: 17px;")
-                    span(class="glyphicon glyphicon-triangle-right")
-                    span Dummy content
-            li
-              a.btn.btn-lg.btn-default(href='#') Enquire Now >>
+   .container
+        #intrusion-detection(style="font-size: 15pt;")
+            p(style="text-align:left;font-size: 17px;")
+                span(class="glyphicon glyphicon-triangle-right")
+                span We Design, Supply, Install, Commission and Service (SLA) Intrusion Detection Systems.
+            p
+            a.btn.btn-lg.btn-default(href='/contact') Enquire Now &gt;&gt;

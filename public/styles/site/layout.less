@@ -4,8 +4,18 @@
 	font-family: 'Raleway', sans-serif;
 }
 
+body{
+	//overflow-y: hidden;
+	margin:0px;
+}
+
 #header {
 	margin-top: 30px;
+}
+
+#body{
+	//width:99%;
+	overflow: hidden;
 }
 
 #footer {
@@ -20,7 +30,7 @@
 {
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
-  width: 400px;
+  //width: 400px;
   margin:auto;
 }
 /* Padding for spacing */
@@ -33,6 +43,25 @@
 //setup navbar
 .navbar{
 	height: @nav-height;
+}
+
+.navbar-brand img{
+	margin-top:-20px;
+	width:300px;
+	height:100px;
+}
+
+.icon-bar{
+	background-color:black;
+	border: 1px solid #A3A1A1;
+}
+
+.icon-bar:hover{
+	background-color:#fff;
+}
+
+.navbar-toggle:hover{
+	background-color:#636363;
 }
 
 //.nav, .navbar, .navbar-nav, .navbar-left, .navbar-right, .navbar-collapse, .collapse{
@@ -89,11 +118,21 @@
 	color: @system-accent-colour;
 }
 
+#slogan-bar{
+	height:80px;
+	background-color: #f14300;
+	border-radius:10px;
+}
 
 .active{
 	border-top: 3px solid @system-accent-colour;
-	background:linear-gradient(#343434, #D5CFCF);
+	//background:linear-gradient(#343434, #D5CFCF);
+	background-color: #353535;
 	border-bottom: 3px solid @system-accent-colour;
+}
+
+.active a{
+	color:#f14300;
 }
 
 //setup carousel
@@ -120,7 +159,7 @@
 #social-link-container
 {
   margin-top: 10px;
-  width: 140px;
+  width: 200px;
   margin-left:auto;
   margin-right: auto;
 }
@@ -132,14 +171,21 @@
 
 .social-link
 {
-  width:30px;
-  height:30px;
+  width:@social-link-size;
+  height:@social-link-size;
   background-repeat:no-repeat;
 }
 
 #lnk_face
 {
   background:url('/images/facebook_grey.svg');
+}
+
+#lnk_link
+{
+	background:url('/images/In-Black-128px-R.png');
+	background-size: cover;//@social-link-size @social-link-size;
+	background-repeat: no-repeat;
 }
 
 #lnk_twit
@@ -155,6 +201,13 @@
 #lnk_face:hover
 {
   background: url('/images/facebook.svg');
+}
+
+#lnk_link:hover
+{
+	background: url('/images/In-2C-128px-R.png');
+	background-size: cover;//@social-link-size @social-link-size;
+	background-repeat: no-repeat;
 }
 
 #lnk_twit:hover
@@ -187,42 +240,38 @@
 	width:700px;
 }
 
-@media screen and (max-width: 1000px) {
-	.navbar-nav a{
-		font-size: @nav-font-size-med;
-	}
-}
-
-/* Small devices (smartphones, 768px and up) */
-@media (max-width: 767px)
+/* Small devices (smartphones, etc.) */
+@media (max-width: 768px)
 {
 	#omega_carousel
 	{
-	  height: 130px;
+		height: 160px;
+		margin-top:60px;
 	  background-color: #343434;
 	  z-index: 0;
 	}
   
 	#omega_carousel .carousel-inner > .item > img
 	{
-	  height: 130px;
+	  height: 160px;
 	}
 
 	nav
 	{
 	  z-index: 1;
-	  width: 100%;
+	  //width: 100%;
 	}
   
 	#navbar
 	{
 		background-color:rgba(0,0,0,.9);
 		height: 300px;
-	  width: 90%;
-	  margin: auto;
-	  margin-top: 20px;
+	  //width: 90%;
+		margin-left: auto;
+		margin-right: auto;
 	  border-radius: 3px;
-	  border:1px solid rgba(0, 0, 0, 1.0);
+		border:1px solid #f14300;
+		//margin-top: 0px !important;
 	}
 
 	#navbar > ul > li
@@ -235,8 +284,22 @@
 		background:none;
 	}
 
+	.navbar-right{
+		background-color:#636363;
+		height:150px;
+	}
+
+	.navbar-brand img{
+		margin-top:-95px;
+		margin-left:-20px;
+	}
+
+	#slogan-bar{
+		height:110px;
+	}
+
 	.promo{
-		width:400px;
+		width:350px;
 		height:450px;
 	}
 
@@ -258,16 +321,46 @@
 		//color: rgba(233, 65, 132, 1.0);
 		font-size: 16px;
 	}
+
+	.carousel-caption .btn
+	{
+		height: 30px;
+		width:100px;
+		font-size:10px;
+	}
+	//.carousel-caption .btn a
 }
 
-/* Small devices (tablets, 768px and up) */
-@media (max-width: 767px)
+/* Medium devices (tablets, etc.)*/
+@media (min-width: 769px) and (max-width: 1024px)
 {
-}
+	.navbar-nav a{
+		font-size: @nav-font-size-med;
+	}
 
-/* Medium devices (desktops, 992px and up) */
-@media (max-width: 991px)
-{
+	.navbar-left li{
+		width:60px;
+		height: @nav-height;
+	}
+
+	.navbar-right{
+		display: none;
+	}
+
+	#social-link-container
+	{
+		width:10px;
+		height:10px;
+	}
+
+	.social-link
+	{
+		width:20px;
+		height:20px;
+		margin:0px;
+		padding:0px;
+	}
+
 	.mastfoot
 	{
 	  /*background: rgba(43,117,255,.6);*/
@@ -282,8 +375,19 @@
 	}
 }
 
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px)
+/* Large devices (laptops, etc.) */
+@media (min-width: 1025px) and (max-width: 1365)
 {
+	.navbar-nav a{
+		font-size: @nav-font-size;
+	}
 
+	.navbar-left li{
+		width:100px;
+		height: @nav-height;
+	}
+
+	.navbar-right{
+		display: none;
+	}
 }

@@ -1,64 +1,59 @@
 extends ../layouts/default
 
-block content
-	h2(style="text-align:center;margin-top:100px;") About Us
-	.row(style='margin:25px;')
-		.col-xs-12.col-sm-6.col-md-6.col-lg-3
-			//div(style='width:140px;height:140px;margin:auto;background-color:rgba(233, 65, 132, 1.0);border-radius:20px;border:1px solid #fff;')
-			img(src='/images/intrusion/alrm_back.jpg', style='margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='INTRUSION SYSTEMS')
-			h3(style='text-align:center') INTRUSION SYSTEMS
-			p(style='text-align:center') We supply, install and support alarm devices for audible, visual alarm signal.
-		.col-xs-12.col-sm-6.col-md-6.col-lg-3
-			img(src='/images/cctv/hikvision-cctv.png', style='width:300px;height:165px;margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='CCTV SURVEILLANCE SYSTEMS')
-			h3(style='text-align:center') CCTV SURVEILLANCE
-			p(style='text-align:center') We supply, install and support CCTV systems.
-		.col-xs-12.col-sm-6.col-md-6.col-lg-3
-			img(src='/images/fire/smoke_back.jpg', style='margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='FIRE DETECTION / SUPPRESSION')
-			h3(style='text-align:center') FIRE DETECTION / SUPPRESSION
-			p(style='text-align:center') We supply Residential, Commercial or industrial devices.
-		.col-xs-12.col-sm-6.col-md-6.col-lg-3
-			img(src='/images/access/morpho-sigma.jpg',style='width:300px;height:165px;margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='ACCESS CONTROL')
-			h3(style='text-align:center') ACCESS CONTROL
-			p(style='text-align:center;')
-			| We supply &amp; install various High Quality Security Products.
-			br
-			a(href='/about#tc', style="text-align:center;") Terms &amp; Conditions
-			|  apply.
+block intro
+	.container
+		h1(style="text-align:center;")  About Us
 
-	div(style="margin:auto;margin-top:20px;")
+block content
+	.container
+		.row(style='margin:0px;')
+			.col-xs-12.col-sm-6.col-md-6.col-lg-3
+				//div(style='width:140px;height:140px;margin:auto;background-color:rgba(233, 65, 132, 1.0);border-radius:20px;border:1px solid #fff;')
+				img(src='/images/intrusion/alrm_back.jpg', style='width:300px;height:165px;margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='INTRUSION SYSTEMS')
+				h3(style='text-align:center') INTRUSION SYSTEMS
+				p(style='text-align:center') We supply, install and support alarm devices for audible, visual alarm signal.
+			.col-xs-12.col-sm-6.col-md-6.col-lg-3
+				img(src='/images/cctv/hikvision-cctv.png', style='width:300px;height:165px;margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='CCTV SURVEILLANCE SYSTEMS')
+				h3(style='text-align:center') CCTV SURVEILLANCE
+				p(style='text-align:center') We supply, install and support CCTV systems.
+			.col-xs-12.col-sm-6.col-md-6.col-lg-3
+				img(src='/images/fire/smoke_back.jpg', style='width:300px;height:165px;margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='FIRE DETECTION / SUPPRESSION')
+				h3(style='text-align:center') FIRE DETECTION / SUPPRESSION
+				p(style='text-align:center') We supply Residential, Commercial or industrial devices.
+			.col-xs-12.col-sm-6.col-md-6.col-lg-3
+				img(src='/images/access/morpho-sigma.jpg',style='width:300px;height:165px;margin-top:10px;display:block;margin:auto;border-radius:15px;border: 1px solid #343434;', alt='ACCESS CONTROL')
+				h3(style='text-align:center') ACCESS CONTROL
+				p(style='text-align:center;')
+				| We supply &amp; install various High Quality Security Products.
+				br
+				a(href='/about#tc', style="text-align:center;") Terms &amp; Conditions
+				|  apply.
+
 		h4(style="text-align:center;font-weight:bold;text-decoration: underline;")
 			span(class="glyphicon glyphicon-info-sign", style="width:80px;height:40px;margin-right:5px;", aria-hidden="true")
 			span Core Business
-		ul(style="font-size: 15pt;list-style:none;width:600px;border-top: 1px solid #eeeeee;border-bottom: 1px solid #eeeeee;margin:auto;")
-			li(style="margin-top:10px;")
-				p(style="text-align:left;font-size: 17px;")
-					span(class="glyphicon glyphicon-triangle-right")
-					span (BMS) Fire and Security Systems Integration
-			li
-				p(style="text-align:left;font-size: 17px;")
-					span(class="glyphicon glyphicon-triangle-right")
-					|
-					span Access Control
-			li
-				p(style="text-align:left;font-size: 17px;")
-					span(class="glyphicon glyphicon-triangle-right")
-					span CCTV
-			li
-				p(style="text-align:left;font-size: 17px;")
-					span(class="glyphicon glyphicon-triangle-right")
-					span Intrusion
-			li
-				p(style="text-align:left;font-size: 17px;")
-					span(class="glyphicon glyphicon-triangle-right")
-					span Fire Detection &amp; Suppression
-			li
-				p(style="text-align:left;font-size: 17px;")
-					span(class="glyphicon glyphicon-triangle-right")
-					span PA &amp; Evacuation Systems
-			li
-				p(style="text-align:left;font-size: 17px;")
-					span(class="glyphicon glyphicon-triangle-right")
-					span Nurse Call
+		#core-business(style="font-size: 15pt;list-style:none;")
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Fire and Security Systems Integration (BMS)
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Access Control
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span CCTV
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Intrusion
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Fire Detection &amp; Suppression
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span PA &amp; Evacuation Systems
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Nurse Call
 
 		h3(style="text-align:center;margin-top:50px;") Vision
 		p(style="text-align:center;font-size: 17px;") To be a Nationally Based Company in the Fire and Security Industry by 2015
@@ -66,198 +61,176 @@ block content
 		h3(style="text-align:center;") Mission
 		p(style="text-align:center;font-size: 17px;") To provide our clients with a quality service and product, through continuous improvement
 
-		h3(style="text-align:center;") Strategy
-		ul.about-lists(style="font-size: 17px;margin:auto;")
-			li Skills Development and Continuous Training.
-			li Research and Development.
-			li Delivering the correct Products and Services.
-			li Design and Engineer Solutions to meet our Clients’ Requirements.
-			li Continuous Improvement in product knowledge.
-			li Competitive pricing.
+		h4(style="text-align:center;font-weight:bold;text-decoration: underline;")
+			span(class="glyphicon glyphicon-info-sign", style="width:80px;height:40px;margin-right:5px;", aria-hidden="true")
+			span Strategy
+		#strategy(style="font-size: 15pt;")
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Skills Development and Continuous Training.
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Research and Development.
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Delivering the correct Products and Services.
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Design and Engineer Solutions to meet our Clients’ Requirements.
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Continuous Improvement in product knowledge.
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Competitive pricing.
 
-		div(style="margin:auto;margin-top:30px;")
-			h4(style="text-align:center;font-weight:bold;text-decoration: underline;")
-				span(class="glyphicon glyphicon-info-sign", style="width:80px;height:40px;margin-right:5px;", aria-hidden="true")
-				span Compliance
-			ul.about-lists(style="font-size: 15pt;list-style:none;border-top: 1px solid #eeeeee;margin:auto;")
-				li(style="margin-top:10px;")
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong BBBEE Status
-							| — BWO. A Level 1 Contributor.
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						|
-						span
-							strong CIDB
-							| - 2MEPE
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong Environmental
-							| - All Products used are Evironmentally Compliant
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong Health &amp; Safety
-							| — Compliant to the Occupational Health and Safety Act.
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong Affiliations
-							| — Members of FDIA, FPA, PSIRA, FSIB
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong Quality Management System
-							| — ISO 9001—2008 Certificate No. SA1793
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong Warrantee
-							| — 12 months on Workmanship &amp; Equipment or Tailored to Clients Requirements.
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong Training and Skills Development
-							| — Certified Training Institution for the Vaal Technical University.
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong Business Experience
-							| – 15 years.
+		h4(style="text-align:center;font-weight:bold;text-decoration: underline;")
+			span(class="glyphicon glyphicon-info-sign", style="width:80px;height:40px;margin-right:5px;", aria-hidden="true")
+			span Compliance
+		#strategy(style="font-size: 15pt;")
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong BBBEE Status
+					| — BWO. A Level 1 Contributor.
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong CIDB
+					| - 2MEPE
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong Environmental
+					| - All Products used are Evironmentally Compliant
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong Health &amp; Safety
+					| — Compliant to the Occupational Health and Safety Act.
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong Affiliations
+					| — Members of FDIA, FPA, PSIRA, FSIB
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong Quality Management System
+					| — ISO 9001—2008 Certificate No. SA1793
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong Warrantee
+					| — 12 months on Workmanship &amp; Equipment or Tailored to Clients Requirements.
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong Training and Skills Development
+					| — Certified Training Institution for the Vaal Technical University.
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong Business Experience
+					| – 15 years.
 
-		div(style="margin:auto;margin-top:30px;")
-			h4(style="text-align:center;font-weight:bold;text-decoration: underline;")
-				span(class="glyphicon glyphicon-info-sign", style="width:80px;height:40px;margin-right:5px;", aria-hidden="true")
-				span Key Client Base, amoungst others
-			ul.about-lists(style="font-size: 15pt;list-style:none;border-top: 1px solid #eeeeee;margin:auto;")
-				li(style="margin-top:10px;")
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span Eskom SOC
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span Transnet SOC
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span Liquid Telecom
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span G4S
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span Public Works
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span Tiger Brands
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span Arcelor Mittal Steel
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span SA Diamond and Precious Metal Regulator
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span Medowfeeds
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span Adcock Ingram
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span Northam Platinum
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span Road Accident Fund
+		h4(style="text-align:center;font-weight:bold;text-decoration: underline;")
+			span(class="glyphicon glyphicon-info-sign", style="width:80px;height:40px;margin-right:5px;", aria-hidden="true")
+			span Key Client Base
+		#client-base(style="font-size: 15pt;")
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Eskom SOC
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Transnet SOC
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Liquid Telecom
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span G4S
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Public Works
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Tiger Brands
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Arcelor Mittal Steel
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span SA Diamond and Precious Metal Regulator
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Medowfeeds
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Adcock Ingram
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Northam Platinum
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span Road Accident Fund
 
-		div(style="margin:auto;margin-top:30px;")
-			h4(style="text-align:center;font-weight:bold;text-decoration: underline;")
-				span(class="glyphicon glyphicon-info-sign", style="width:80px;height:40px;margin-right:5px;", aria-hidden="true")
-				span Major Projects Completed, amongst others
-			ul.about-lists(style="font-size: 15pt;list-style:none;border-top: 1px solid #eeeeee;margin:auto;")
-				li(style="margin-top:10px;")
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong Standard Bank
-							| — PA, Access Control, Fire Detection &amp; Gas Suppression BMS
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong ABSA
-							| — PA, Access Control, Fire Detection &amp; Gas Suppression BMS
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong G4S
-							| — Integrated Security Systems
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong Blue Train
-							| — Audio Visual
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong MEDUNSA
-							| — Fire System
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong Upington Referal Hospital
-							| — Integrated Fire and Security System BMS
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong Rob Ferreira Hospital
-							| — Fire System
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong Phelophepha 1 &amp; 2 Transnet's Mobile Hospital
-							| — IT Integrated Security
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong Rand Water
-							| — Fire Detection and Suppression
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong SA National Lottery
-							| — Intrusion, CCTV, Access Control, Fire
-				li
-					p(style="text-align:left;font-size: 17px;")
-						span(class="glyphicon glyphicon-triangle-right")
-						span
-							strong SA Diamond City
-							| — Integrated Security System
+		h4(style="text-align:center;font-weight:bold;text-decoration: underline;")
+			span(class="glyphicon glyphicon-info-sign", style="width:80px;height:40px;margin-right:5px;", aria-hidden="true")
+			span Major Projects Completed
+		#projects-completed(style="font-size: 15pt;")
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong Standard Bank
+					| — PA, Access Control, Fire Detection &amp; Gas Suppression BMS
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong ABSA
+					| — PA, Access Control, Fire Detection &amp; Gas Suppression BMS
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong G4S
+					| — Integrated Security Systems
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong Blue Train
+					| — Audio Visual
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong MEDUNSA
+					| — Fire System
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong Upington Referal Hospital
+					| — Integrated Fire and Security System BMS
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong Rob Ferreira Hospital
+					| — Fire System
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong Phelophepha 1 &amp; 2 Transnet's Mobile Hospital
+					| — IT Integrated Security
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong Rand Water
+					| — Fire Detection and Suppression
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong SA National Lottery
+					| — Intrusion, CCTV, Access Control, Fire
+			p(style="text-align:left;font-size: 17px;")
+				span(class="glyphicon glyphicon-triangle-right")
+				span
+					strong SA Diamond City
+					| — Integrated Security System

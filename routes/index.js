@@ -36,7 +36,7 @@ exports = module.exports = function (app)
 {
 	// Views
 	app.get('/', routes.views.index);
-	app.get('/services', routes.views.services.services);
+	app.get('/services', routes.views.services.all_services);
 	app.get('/services/pa-evacuation-systems', routes.views.services.pa_evacuation);
 	app.get('/services/fire-detection-systems', routes.views.services.fire_detection);
 	app.get('/services/nurse-call-systems', routes.views.services.nurse_call);

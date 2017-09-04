@@ -6,11 +6,11 @@ block content
 			p: a(href='/blog') &larr; back to the blog
 			hr
 			if !data.post
-				h2 Invalid Post.
+				h2(style="text-align:center;") Invalid Post.
 			else
 				header
 					h1= data.post.title
-					h5 Posted 
+					h5(style="text-align:center;") Posted 
 						if data.post.publishedDate
 							| on #{data.post._.publishedDate.format('MMMM Do, YYYY')} 
 						if data.post.categories && data.post.categories.length

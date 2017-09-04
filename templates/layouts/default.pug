@@ -8,9 +8,15 @@ html
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="description", content="Omega Fire & Security provides Intelligent Building and Security Solutions which meet the demands of tomorrow's future.")
+		meta(name="author", content="Casper Ndlovu")
+		meta(name="keywords", content="cctv,surveillance,security,system,fire,detection,intrusion,bms,integration,access,control")
+		meta(name="robots", content="index,follow")
+		meta(name="DC.title", content="Omega Fire and Security | Protecting Life and Property through Innovation and Technology")
 
-		title= title || 'Omega Fire and Security'
+		title= title || 'Omega Fire and Security | Protecting Life and Property through Innovation and Technology'
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+		link(rel="alternate", hreflang="en", href="https://www.omegafs.co.za/")
 		link(href='https://fonts.googleapis.com/css?family=Raleway', rel='stylesheet')
 		//- Customise the stylesheet for your site by editing /public/styles/site.less
 		//- All .less files will be automatically compiled and minified in production.
@@ -47,35 +53,35 @@ html
 					.navbar-header
 						button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar', style="margin-top: 30px;")
 							span.sr-only Toggle navigation
-							span.icon-bar(style='background-color:black;')
-							span.icon-bar(style='background-color:black;')
-							span.icon-bar(style='background-color:black;')
+							span#first_bar.icon-bar
+							span#second_bar.icon-bar
+							span#third_bar.icon-bar
 						a.navbar-brand(href='/')
-							img(style='margin-top:-20px;width:300px;height:100px;', src='/images/omega-logo.svg')
+							img(src='/images/omega-logo.svg')
 					#navbar.collapse.navbar-collapse
 						ul.nav.navbar-nav.navbar-left(style="background-color:transparent !important;")
 							each link in navLinks
 								if(link.key!='services')
-									li(class=(section == link.key ? 'active' : null)): a(href=link.href, style="background-color:transparent !important;")= link.label
+									li(style="z-index:0;",class=(section == link.key ? 'active' : null)): a(href=link.href, style="background-color:transparent !important;")= link.label
 								else
-									li.dropdown
+									li.dropdown(style="z-index:5;")
 										span.sr-only (current)
 										a.dropdown-toggle(href='', style="background-color: transparent !important;", data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Services
 											span.caret
-										ul.dropdown-menu(style="background-color:#636363;z-index: 5;")
-											li
+										ul.dropdown-menu(style="background-color:#000;border: 1px solid #f14300;")
+											li(class=(section == link.key ? 'active' : null))
 												a(href='/services/fire-detection-systems', style="background-color: transparent !important;text-align:left;") *Fire Detection &amp; Gas Suppression Systems
-											li
+											li(class=(section == link.key ? 'active' : null))
 												a(href='/services/pa-evacuation-systems', style="background-color: transparent !important;text-align:left;") *Public Address &amp; Evacuation Systems
-											li
+											li(class=(section == link.key ? 'active' : null))
 												a(href='/services/access-control-systems', style="background-color: transparent !important;text-align:left;") *Access Control/Time &amp; Attendance Solutions
-											li
+											li(class=(section == link.key ? 'active' : null))
 												a(href='/services/cctv-surveillance-systems', style="background-color: transparent !important;text-align:left;") *CCTV Surveillance Systems
-											li
+											li(class=(section == link.key ? 'active' : null))
 												a(href='/services/intrusion-detection-systems', style="background-color: transparent !important;text-align:left;") *Intrusion Detection Systems
-											li
+											li(class=(section == link.key ? 'active' : null))
 												a(href='/services/integrated-bms-systems', style="background-color: transparent !important;text-align:left;") *Integrated BMS
-											li
+											li(class=(section == link.key ? 'active' : null))
 												a(href='/services/nurse-call-systems', style="background-color: transparent !important;text-align:left;") *Nurse Call Systems
 											//li.divider(role='separator', style="background-color:#636363;")
 											//li
@@ -85,9 +91,12 @@ html
 								a(href='https://web.facebook.com/OmegaFireAndSec/' style="background-color:transparent !important;", target="_blank",)
 									#lnk_face.social-link(style="width:45px;height:45px;margin:auto;")
 							li
+								a(href='https://www.linkedin.com/company/18167541/', style="background-color:transparent !important;", target="_blank")
+									#lnk_link.social-link(style="width:45px;height:45px;margin:auto;")
+							//li
 								a(href='', style="background-color:transparent !important;", target="_blank")
 									#lnk_twit.social-link(style="width:45px;height:45px;margin:auto;")
-							li
+							//li
 								a(href='', style="background-color:transparent !important;", target="_blank")
 									#lnk_inst.social-link(style="width:45px;height:45px;margin:auto;")
 
@@ -110,66 +119,69 @@ html
 
 		//- FOOTER
 		.container: #footer
-			div
-				div(style="height:80px;background-color: #f14300;border-radius:10px;")
-					h2(style="text-align:center;padding-top:5px;color:#fff;") Protecting Life and Property
-					h4(style="text-align:center;color:#fff;") through Innovation and Technology
-				p(style="text-align:center;")
-					strong Head Office:
-					|  011 680 0640 |
-					strong(style="margin-left:5px;") Emergency:
-					|  082 788 6424 |
-					strong(style="margin-left:5px;") Website:
-					a(href="http://www.omegafs.co.za/")  www.omegafs.co.za
-				p(style="text-align:center;font-style:italic;font-size:16px;") Omega Fire &amp; Security provides Intelligent Building and Security Solutions which meet the demands of tomorrow's future.
-				p(style="text-align:center;font-style:italic;font-size:16px;") Please direct all enquiries to: 
-					a(href="mailto:info@foag.co.za") info@foag.co.za
-				div(style="width:55%;margin:auto;")
-					.row(style="margin:auto;")
-						.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
-							a(href="https://www.fdia.co.za/", target="_blank")
-								img(src="/images/partners/fdia-logo.jpg", style="width:150px;height:70px;margin:auto;", alt="FDIA Logo")
-						.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
-							a(href="http://www.psira.co.za/", target="_blank")
-								img(src="/images/partners/psira-logo.png", style="width:150px;height:70px;", alt="PSIRA Logo")
-						.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
-							a(href="http://www.fpasa.co.za/", target="_blank")
-								img(src="/images/partners/fpa-logo.jpg", style="width:150px;height:70px;", alt="FPA Logo")
-						.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
-							a(href="https://www.saqccfire.co.za/", target="_blank")
-								img(src="/images/partners/saqcc-logo.png", style="width:150px;height:70px;", alt="SAQCC Logo")
-				h4(style="font-weight: bold;text-align:center;") 100% Black Owned EME | Level 1 BBBEE (BWO)
-				.mastfoot
-					.inner
-						p(style='text-align:center;font-size:16px;')
-							if user
-								if user.canAccessKeystone
-									a(style='margin-right:5px;', href='/keystone') | Open Keystone |
-								a(href='/keystone/signout') | Dashboard Sign Out |
-							else
-								a(href='/keystone/signin') | Dashboard Sign In |
-						p(style='color:#000;text-align:center;font-size:16px;') &copy;2017,
-							|
-							a(href='http://omegafs.co.za/')   Omega Fire and Security
-							|
-						ul#social-link-container
-							li
-								a(href='https://web.facebook.com/OmegaFireAndSec/')
-									#lnk_face.social-link
-							li
-								a(href='')
-									#lnk_twit.social-link
-							li
-								a(href='')
-									#lnk_inst.social-link
+			#slogan-bar
+				h2(style="text-align:center;padding-top:5px;color:#fff;") Protecting Life and Property
+				h4(style="text-align:center;color:#fff;") through Innovation and Technology
+			p(style="text-align:center;")
+				strong Head Office:
+				|  011 680 0640 |
+				strong(style="margin-left:5px;") Emergency:
+				|  082 788 6424 |
+				strong(style="margin-left:5px;") Website:
+				a(href="http://www.omegafs.co.za/")  www.omegafs.co.za
+			p(style="text-align:center;font-style:italic;font-size:16px;") Omega Fire &amp; Security provides Intelligent Building and Security Solutions which meet the demands of tomorrow's future.
+			p(style="text-align:center;font-style:italic;font-size:16px;") Please direct all enquiries to: 
+				a(href="mailto:info@foag.co.za") info@foag.co.za
+			div(style="width:55%;margin:auto;")
+				.row(style="margin:auto;")
+					.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
+						a(href="https://www.fdia.co.za/", target="_blank")
+							img(src="/images/partners/fdia-logo.jpg", style="width:150px;height:70px;margin:auto;", alt="FDIA Logo")
+					.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
+						a(href="http://www.psira.co.za/", target="_blank")
+							img(src="/images/partners/psira-logo.png", style="width:150px;height:70px;", alt="PSIRA Logo")
+					.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
+						a(href="http://www.fpasa.co.za/", target="_blank")
+							img(src="/images/partners/fpa-logo.jpg", style="width:150px;height:70px;", alt="FPA Logo")
+					.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
+						a(href="https://www.saqccfire.co.za/", target="_blank")
+							img(src="/images/partners/saqcc-logo.png", style="width:150px;height:70px;", alt="SAQCC Logo")
+			h4(style="font-weight: bold;text-align:center;") 100% Black Owned EME | Level 1 BBBEE (BWO)
+			.mastfoot
+				.inner
+					p(style='text-align:center;font-size:16px;')
+						if user
+							if user.canAccessKeystone
+								a(style='margin-right:5px;', href='/keystone') | Open Keystone |
+							a(href='/keystone/signout') | Dashboard Sign Out |
+						else
+							a(href='/keystone/signin') | Dashboard Sign In |
+					p(style='color:#000;text-align:center;font-size:16px;') &copy;2017,
+						|
+						a(href='http://omegafs.co.za/')   Omega Fire and Security
+						|
+					ul#social-link-container
+						li
+							a(href='https://web.facebook.com/OmegaFireAndSec/', target="_blank")
+								#lnk_face.social-link
+						li
+							a(href='https://www.linkedin.com/company/18167541/', target="_blank")
+								#lnk_link.social-link
+						li
+							a(href='https://twitter.com/', target="_blank")
+								#lnk_twit.social-link
+						li
+							a(href='https://instagram.com/', target="_blank")
+								#lnk_inst.social-link
 
-						p(style="color:#000;text-align:center;")
-							img(alt="coded", src='images/ic_code_black_48px.svg', style="width:25px;height:25px;")
-							|  with 
-							img(alt="love", src='images/ic_favorite_black_48px.svg', style="width:25px;height:25px;")
-							|  by
-							a(href="http://casper.ndlovu.me", style="margin-left:10px;") Casper
-							|  | Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
+					p(style="color:#000;text-align:center;")
+						img(alt="coded", src='images/ic_code_black_48px.svg', style="width:25px;height:25px;")
+						|  with 
+						img(alt="love", src='images/ic_favorite_black_48px.svg', style="width:25px;height:25px;")
+						|  by
+						a(href="http://casper.ndlovu.me", style="margin-left:10px;", target="_blank") Casper
+						|  | Powered by 
+						a(href="http://keystonejs.com", target="_blank") KeystoneJS
 
 
 		//- JAVASCRIPT
@@ -183,6 +195,9 @@ html
 		//- them specifically here, instead of bootstrap-3.3.5.min.js
 		script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
 
+		script(src='/js/menu-toggle.js')
+		script(src='/js/google-analytics.js')
+
 		//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
 		//- which generate links to edit content for users who can access Keystone
 		if user && user.canAccessKeystone
@@ -192,3 +207,4 @@ html
 
 		//- Include template-specific javascript files by extending the js block
 		block js
+			
