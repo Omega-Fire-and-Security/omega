@@ -1,25 +1,41 @@
 extends ../layouts/default
 
+block css
+	link(rel="stylesheet", href="/styles/gallery.css")
+
 block intro
 	.container
-		h1 Gallery
+		h1(style="text-align:center;") Gallery
 	
 block content
 	.container
-		if galleries.length
-			each gallery in galleries
-				h2= gallery.name
-					if gallery.publishedDate
-						.pull-right.text-muted= gallery._.publishedDate.format('Do MMM YYYY')
-				
-				.row.gallery-images
-					if gallery.heroImage.exists
-						.col-sm-4.col-md-4.gallery-image: img(src=gallery._.heroImage.limit(680,680)).img-rounded
-						.col-sm-8.col-md-8: .row
-							each image in gallery.images
-								.col-xs-4.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
-					else
-						each image in gallery.images
-							.col-xs-6.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
-		else
-			h3.text-muted There are no image galleries yet.
+		.row
+			each image, index in images
+				.col-sm-12.col-md-4.col-ls-3
+					img.hover-shadow(src="images/gallery/"+image, style="width:320px;height:230px;border-radius:10px;margin:auto;padding:10px;", onclick="openModal();currentSlide("+(index+1)+")")
+		#myModal.modal
+			span(class="glyphicon glyphicon-remove").close.cursor(onclick="closeModal()", style="width:30px;height:30px;border-radius:50px;background-color: #fff;padding-left:3px;padding-top:3px;")
+			.modal-content(style="background: transparent;")
+				.caption-container
+					//p#caption
+				each image, index in images
+					.mySlides(style="background: transparent;")
+						.numbertext= (index+1) +"/"+ images.length
+						img(src="images/gallery/"+image)
+				a.prev(onclick="plusSlides(-1)") ❮
+				a.next(onclick="plusSlides(1)") ❯
+				#img-nav.row
+					each image, index in images
+						.col-xs-12.col-sm-6.col-md-4.col-ls-3(style="width:150px;height:60px;margin:auto;background-color:rgba(0,0,0,.7);border:2px solid black;")
+							img.demo(src="images/gallery/"+image, style="width:100%;height:100%;", onclick="currentSlide("+(index+1)+")", alt=""+image)
+				//- .column
+				//- 	img.demo(src="img1.jpg", onclick="currentSlide(1)", alt="Nature")
+				//- .column
+				//- 	img.demo(src="img2.jpg", onclick="currentSlide(2)", alt="Trolltunga")
+				//- .column
+				//- 	img.demo(src="img3.jpg", onclick="currentSlide(3)", alt="Mountains")
+				//- .column
+				//- 	img.demo(src="img4.jpg", onclick="currentSlide(4)", alt="Lights")
+
+block js
+	script(src="/js/gallery.js")
