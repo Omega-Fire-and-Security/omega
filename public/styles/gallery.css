@@ -153,9 +153,10 @@ img.hover-shadow {
   }
 
   .mySlides img{
-    height: 250px;
-    width: 100%;
-    margin-left: 0px;
+    height: 270px;
+    width: 120%;
+    margin-left: -10%;
+    border-radius: 20px;
   }
 
   .numbertext {

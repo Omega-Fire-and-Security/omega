@@ -23,7 +23,6 @@ exports = module.exports = function (req, res)
 			view.render('gallery');
 			return;
 		}
-		console.log('\n'+dir_data);
 		//view.query('imgs', dir_data);
 		// Render the view
 		view.render('gallery', {"images": dir_data});

@@ -89,10 +89,10 @@ html
 						ul.nav.navbar-nav.navbar-right
 							li
 								a(href='https://web.facebook.com/OmegaFireAndSec/' style="background-color:transparent !important;", target="_blank",)
-									#lnk_face.social-link(style="width:45px;height:45px;margin:auto;")
+									#lnk_face.social-link
 							li
 								a(href='https://www.linkedin.com/company/18167541/', style="background-color:transparent !important;", target="_blank")
-									#lnk_link.social-link(style="width:45px;height:45px;margin:auto;")
+									#lnk_link.social-link
 							//li
 								a(href='', style="background-color:transparent !important;", target="_blank")
 									#lnk_twit.social-link(style="width:45px;height:45px;margin:auto;")
@@ -132,20 +132,19 @@ html
 			p(style="text-align:center;font-style:italic;font-size:16px;") Omega Fire &amp; Security provides Intelligent Building and Security Solutions which meet the demands of tomorrow's future.
 			p(style="text-align:center;font-style:italic;font-size:16px;") Please direct all enquiries to: 
 				a(href="mailto:info@foag.co.za") info@foag.co.za
-			div(style="width:55%;margin:auto;")
-				.row(style="margin:auto;")
-					.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
-						a(href="https://www.fdia.co.za/", target="_blank")
-							img(src="/images/partners/fdia-logo.jpg", style="width:150px;height:70px;margin:auto;", alt="FDIA Logo")
-					.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
-						a(href="http://www.psira.co.za/", target="_blank")
-							img(src="/images/partners/psira-logo.png", style="width:150px;height:70px;", alt="PSIRA Logo")
-					.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
-						a(href="http://www.fpasa.co.za/", target="_blank")
-							img(src="/images/partners/fpa-logo.jpg", style="width:150px;height:70px;", alt="FPA Logo")
-					.col-md-3.col-sm-12(style="width:150px;height:70px;margin:auto;")
-						a(href="https://www.saqccfire.co.za/", target="_blank")
-							img(src="/images/partners/saqcc-logo.png", style="width:150px;height:70px;", alt="SAQCC Logo")
+			#affiliates.row
+				.col-xs-12.col-sm-3.col-md-3.col-lg-3
+					a(href="https://www.fdia.co.za/", target="_blank")
+						img(src="/images/partners/fdia-logo.jpg", style="width:150px;height:70px;", alt="FDIA Logo")
+				.col-xs-12.col-sm-3.col-md-3.col-lg-3
+					a(href="http://www.psira.co.za/", target="_blank")
+						img(src="/images/partners/psira-logo.png", style="width:150px;height:70px;", alt="PSIRA Logo")
+				.col-xs-12.col-sm-3.col-md-3.col-lg-3
+					a(href="http://www.fpasa.co.za/", target="_blank")
+						img(src="/images/partners/fpa-logo.jpg", style="width:150px;height:70px;", alt="FPA Logo")
+				.col-xs-12.col-sm-3.col-md-3.col-lg-3
+					a(href="https://www.saqccfire.co.za/", target="_blank")
+						img(src="/images/partners/saqcc-logo.png", style="width:150px;height:70px;", alt="SAQCC Logo")
 			h4(style="font-weight: bold;text-align:center;") 100% Black Owned EME | Level 1 BBBEE (BWO)
 			.mastfoot
 				.inner
@@ -160,19 +159,31 @@ html
 						|
 						a(href='http://omegafs.co.za/')   Omega Fire and Security
 						|
-					ul#social-link-container
-						li
+					#social-link-container.row
+						.col-xs-3.col-sm-3.col-md-3.col-lg-3
 							a(href='https://web.facebook.com/OmegaFireAndSec/', target="_blank")
 								#lnk_face.social-link
-						li
+						.col-xs-3.col-sm-3.col-md-3.col-lg-3
 							a(href='https://www.linkedin.com/company/18167541/', target="_blank")
 								#lnk_link.social-link
-						li
+						.col-xs-3.col-sm-3.col-md-3.col-lg-3
 							a(href='https://twitter.com/', target="_blank")
 								#lnk_twit.social-link
-						li
+						.col-xs-3.col-sm-3.col-md-3.col-lg-3
 							a(href='https://instagram.com/', target="_blank")
 								#lnk_inst.social-link
+						//li
+						//	a(href='https://web.facebook.com/OmegaFireAndSec/', target="_blank")
+						//		#lnk_face.social-link
+						//li
+						//	a(href='https://www.linkedin.com/company/18167541/', target="_blank")
+						//		#lnk_link.social-link
+						//li
+						//	a(href='https://twitter.com/', target="_blank")
+						//		#lnk_twit.social-link
+						//li
+						//	a(href='https://instagram.com/', target="_blank")
+						//		#lnk_inst.social-link
 
 					p(style="color:#000;text-align:center;")
 						img(alt="coded", src='images/ic_code_black_48px.svg', style="width:25px;height:25px;")
