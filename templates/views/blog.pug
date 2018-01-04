@@ -24,11 +24,11 @@ mixin post(post)
 
 block intro
 	.container
-		h1= data.category ? data.category.name : 'Blog'
+		h1(style='text-align:center;')= data.category ? data.category.name : 'Posts'
 
 block content
 	.container: .row
-		h2(style="text-align:center") Posts
+		//h2(style="text-align:center") Posts
 		.col-sm-8.col-md-9
 			if filters.category && !data.category
 				h3.text-muted Invalid Category.

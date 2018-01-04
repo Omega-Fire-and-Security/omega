@@ -50,14 +50,16 @@ html
 
 			div(role="navigation").navbar.navbar-fixed-top
 				.container-fluid
+					div(style="width:100%;height:50px;margin:0px;padding:0px;")
+						a.navbar-brand(href='/')
+							img(src='/images/omega-logo.svg')
 					.navbar-header
 						button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar', style="margin-top: 30px;")
 							span.sr-only Toggle navigation
 							span#first_bar.icon-bar
 							span#second_bar.icon-bar
 							span#third_bar.icon-bar
-						a.navbar-brand(href='/')
-							img(src='/images/omega-logo.svg')
+						
 					#navbar.collapse.navbar-collapse
 						ul.nav.navbar-nav.navbar-left(style="background-color:transparent !important;")
 							each link in navLinks
@@ -186,13 +188,7 @@ html
 						//	a(href='https://instagram.com/', target="_blank")
 						//		#lnk_inst.social-link
 
-					p(style="color:#000;text-align:center;")
-						img(alt="coded", src='images/ic_code_black_48px.svg', style="width:25px;height:25px;")
-						|  with 
-						img(alt="love", src='images/ic_favorite_black_48px.svg', style="width:25px;height:25px;")
-						|  by
-						a(href="http://casper.ndlovu.me", style="margin-left:10px;", target="_blank") Casper
-						|  | Powered by 
+					p(style="color:#000;text-align:center;") Powered by 
 						a(href="http://keystonejs.com", target="_blank") KeystoneJS
 
 
