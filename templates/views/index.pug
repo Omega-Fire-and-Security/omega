@@ -1,41 +1,51 @@
 extends ../layouts/default
 
 block content
-	#omega_carousel.carousel.slide(data-ride='carousel')
-		ol.carousel-indicators(style="background-color:#343434;width:100px;margin:auto;margin-left:-50px;border-radius:15px;")
-			li.active(data-target='omega_carousel', data-slide-to='1')
-			//li(data-target='omega_carousel', data-slide-to='2')
-			li(data-target='omega_carousel', data-slide-to='3')
-			li(data-target='omega_carousel', data-slide-to='4')
-		.carousel-inner(role='listbox')
-			.item.active
-				img.slide-1(src='/images/slider/financial-solutions-available.png', alt='First slide')
-				.container
-					.carousel-caption
-						a.btn.btn-lg.btn-default(href='/blog/post/financial-solutions-now-available', style="border: 1px solid #f14300;") Learn More >>
-			//- .item
-			//- 	img.slide-2(src='/images/slider/small-businesses-expo.png', alt='Second slide')
-			//- 	.container
-			//- 		.carousel-caption
-			//- 			a.btn.btn-lg.btn-default(href='/blog/post/small-businesses-expo', style="border: 1px solid #f14300;") Learn More >>
-			//- 			a.btn.btn-lg.btn-default(href='http://www.reedexpoafrica.co.za/SmallBizExpo/visitors/visitor-registration/', style="border: 1px solid #f14300;margin-left:10px;", target="_blank") Register >>
-			.item
-				img.slide-3(src='/images/slider/hikvision-promo.png', alt='Third slide')
-				.container
-					.carousel-caption
-						a.btn.btn-lg.btn-default(href='/specials#hikvision-cctv-special', style="border: 1px solid #f14300;") Learn More >>
-			.item
-				img.slide-4(src='/images/slider/aug-promo.png', alt='Fourth slide')
-				.container
-					.carousel-caption
-						a.btn.btn-lg.btn-default(href='/specials#tvt-cctv-special', style="border: 1px solid #f14300;") Learn More >>
-		a.left.carousel-control(href='#!/#omega_carousel', role='button', data-slide='prev')
-			span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
-			span.sr-only Previous
-		a.right.carousel-control(href='#!/#omega_carousel', role='button', data-slide='next')
-			span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
-			span.sr-only Next
-			//end of carousel
+	#upper-content
+		#omega_carousel.carousel.slide(data-ride='carousel')
+			ol.carousel-indicators(style="background-color:#343434;width:100px;margin:auto;margin-left:-50px;border-radius:15px;")
+				li.active(data-target='omega_carousel', data-slide-to='1')
+				//li(data-target='omega_carousel', data-slide-to='2')
+				li(data-target='omega_carousel', data-slide-to='3')
+				li(data-target='omega_carousel', data-slide-to='4')
+			.carousel-inner(role='listbox')
+				.item.active
+					img.slide-1(src='/images/slider/financial-solutions-available.png', alt='First slide')
+					.container
+						.carousel-caption
+							a.btn.btn-lg.btn-default(href='/blog/post/financial-solutions-now-available', style="border: 1px solid #f14300;") Learn More >>
+				//- .item
+				//- 	img.slide-2(src='/images/slider/small-businesses-expo.png', alt='Second slide')
+				//- 	.container
+				//- 		.carousel-caption
+				//- 			a.btn.btn-lg.btn-default(href='/blog/post/small-businesses-expo', style="border: 1px solid #f14300;") Learn More >>
+				//- 			a.btn.btn-lg.btn-default(href='http://www.reedexpoafrica.co.za/SmallBizExpo/visitors/visitor-registration/', style="border: 1px solid #f14300;margin-left:10px;", target="_blank") Register >>
+				.item
+					img.slide-3(src='/images/slider/hikvision-promo.png', alt='Third slide')
+					.container
+						.carousel-caption
+							a.btn.btn-lg.btn-default(href='/specials#hikvision-cctv-special', style="border: 1px solid #f14300;") Learn More >>
+				.item
+					img.slide-4(src='/images/slider/aug-promo.png', alt='Fourth slide')
+					.container
+						.carousel-caption
+							a.btn.btn-lg.btn-default(href='/specials#tvt-cctv-special', style="border: 1px solid #f14300;") Learn More >>
+			a.left.carousel-control(href='#!/#omega_carousel', role='button', data-slide='prev')
+				span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+				span.sr-only Previous
+			a.right.carousel-control(href='#!/#omega_carousel', role='button', data-slide='next')
+				span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+				span.sr-only Next
+				//end of carousel
+		#accreditation
+			a(href="https://www.fdia.co.za/", target="_blank")
+				img(src="/images/partners/fdia-logo.jpg", style="width:150px;height:70px;", alt="FDIA Logo")
+			a(href="http://www.psira.co.za/", target="_blank")
+				img(src="/images/partners/psira-logo.png", style="width:150px;height:70px;", alt="PSIRA Logo")
+			a(href="http://www.fpasa.co.za/", target="_blank")
+				img(src="/images/partners/fpa-logo.jpg", style="width:150px;height:70px;", alt="FPA Logo")
+			a(href="https://www.saqccfire.co.za/", target="_blank")
+				img(src="/images/partners/saqcc-logo.png", style="width:150px;height:70px;", alt="SAQCC Logo")
 
 	#partners_carousel.carousel.slide
 		.carousel-inner
